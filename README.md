@@ -1,4 +1,4 @@
-# Media API for thebuffalorugby.club
+# API for api.kamilpatelscholarship.org
 
 File uploads based on
 
@@ -31,7 +31,7 @@ Websites/Manage Websites / Manage / Additional setting / Paths
 Edit server code
 
 ```
-cd /Users/rastridge/code/experiments-nuxt3/nuxt3-brc-media-api/ vscode kps-api
+cd /home/rastridge/api.kamilpatelscholarship.org/ vscode kps-api
 ```
 
 To Upload server code to api.kamilpatelscholarship.org
