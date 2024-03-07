@@ -21,6 +21,7 @@ const NEWS_NEWSLETTER_IMAGE_DIR = 'news_newsletter_images'
 let storage = multer.diskStorage({
 	destination: function (req, file, cb) {
 		cb(null, `${FILE_PATH}${TEMP_DIR}`)
+		// cb(null, '/home/rastridge/kamilpatelscholarship.org/public/imgs/uploads')
 	},
 	filename: function (req, file, cb) {
 		let y = new Date().getFullYear()
