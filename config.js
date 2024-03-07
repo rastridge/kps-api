@@ -14,10 +14,6 @@ module.exports = {
 	db_password: process.env.db_password,
 	db_database: process.env.db_database,
 
-	localContentPath: process.env.localContentPath,
-	localUrl: process.env.localUrl,
 	siteContentPath: process.env.siteContentPath,
 	siteUrl: process.env.siteUrl,
-
-	localhost: process.env.localhost,
 }

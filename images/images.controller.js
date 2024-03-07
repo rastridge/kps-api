@@ -7,8 +7,6 @@ const path = require('path')
 const fs = require('fs')
 const { siteUrl, siteContentPath } = require('../config')
 
-// console.log(siteUrl, siteContentPath)
-
 let contentRootPath = ''
 let BASE_URL = ''
 
@@ -18,9 +16,6 @@ BASE_URL = siteUrl
 const FILE_PATH = contentRootPath
 const TEMP_DIR = '/uploads'
 const NEWS_NEWSLETTER_IMAGE_DIR = 'news_newsletter_images'
-
-////////////// ROUTES //////////////////////
-//router.post('/', addOne);
 
 // SET STORAGE
 let storage = multer.diskStorage({
@@ -57,25 +52,3 @@ router.post('/', upload.single('file'), async (req, res, next) => {
 	}
 })
 module.exports = router
-
-/*
-router.post('/', upload.single('file'), (req, res, next) => {
-  const file = req.file
-  if (!file) {
-    const error = new Error('Please upload a file')
-    error.httpStatusCode = 400
-    return next(error)
-	}
-    res.send( { "imageUrl": `${BASE_URL}${TEMP_DIR}/${file.filename}`})
-  
-})
-module.exports = router;
-*/
-
-/*
-function addOne(req, res, next) {
-    imagesService.addOne(req)
-        .then(images => res.json(images))
-        .catch(err => next(err));
-}
-*/
