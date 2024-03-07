@@ -1,4 +1,4 @@
-﻿const config = require('config.json')
+﻿const { secret } = require('config.js')
 const jwt = require('jsonwebtoken')
 const md5 = require('md5')
 const notifyUser = require('../_helpers/send-mail')
@@ -26,7 +26,6 @@ async function authenticate({ username, password }) {
 		(u) => u.admin_user_name === lc_username && u.admin_user_remind === password
 	)
 	if (user) {
-		const { secret } = config
 		const token = jwt.sign(
 			{
 				sub: user.admin_user_id,

@@ -6,6 +6,16 @@ const jwt = require('_helpers/jwt')
 const errorHandler = require('_helpers/error-handler')
 const nocache = require('nocache')
 
+const {
+	db_host,
+	port,
+	secure,
+	db_user,
+	db_password,
+	db_database,
+} = require('config.js')
+console.log(db_host, port, secure, db_user, db_password, db_database)
+
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(cors())
@@ -53,7 +63,6 @@ app.use('/content', require('./content/content.controller'))
 app.use(errorHandler)
 
 // start server
-const port = 9001
 const server = app.listen(port, function () {
 	console.log('KPS Server listening on port ' + port)
 })

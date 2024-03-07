@@ -1,4 +1,4 @@
-﻿const config = require('config.json')
+﻿const { db_host, db_user, db_password, db_database } = require('config.js')
 const mysql = require('mysql2/promise')
 const notifyUser = require('../_helpers/send-mail')
 const doDBQuery = require('../_helpers/do-query')
@@ -192,10 +192,10 @@ async function getOne(id) {
 async function deleteOne(scholarship_id) {
 	try {
 		const conn = await mysql.createConnection({
-			host: config.db.host,
-			user: config.db.user,
-			password: config.db.password,
-			database: config.db.database,
+			host: db_host,
+			user: db_user,
+			password: db_password,
+			database: db_database,
 		})
 		await conn.beginTransaction()
 		//
@@ -261,10 +261,10 @@ async function addOne({
 }) {
 	try {
 		const CONN = await mysql.createConnection({
-			host: config.db.host,
-			user: config.db.user,
-			password: config.db.password,
-			database: config.db.database,
+			host: DB.host,
+			user: DB.user,
+			password: DB.password,
+			database: DB.database,
 		})
 		await CONN.beginTransaction()
 		//
@@ -467,10 +467,10 @@ async function changeStatus({ id, status }) {
 	// changeStatus scholarship nomination and nominee account
 	try {
 		const conn = await mysql.createConnection({
-			host: config.db.host,
-			user: config.db.user,
-			password: config.db.password,
-			database: config.db.database,
+			host: DB.host,
+			user: DB.user,
+			password: DB.password,
+			database: DB.database,
 		})
 		await conn.beginTransaction()
 

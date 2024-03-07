@@ -1,5 +1,4 @@
 const mysql = require('mysql2/promise')
-const config = require('config.json')
 const doDBQuery = require('../_helpers/do-query')
 const recipientMemberMatch = require('_helpers/recipient-member-match')
 const activityLog = require('_helpers/activity-log')

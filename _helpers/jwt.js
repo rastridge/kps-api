@@ -1,12 +1,11 @@
 const expressJwt = require('express-jwt')
-const config = require('config.json')
+const { secret } = require('config.js')
 
 module.exports = jwt
 
 // Dreamhost Proxy server process inserts extra '/' for reason I don't understand
 // Tht's the reason  for double '//' on routes
 function jwt() {
-	const { secret } = config
 	return expressJwt({ secret }).unless({
 		path: [
 			// public routes that don't require authentication
