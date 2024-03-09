@@ -122,11 +122,11 @@ async function addOne({ username, password, email, admin_user_perm }) {
 			hashedpassword +
 			' ' +
 			email
-		console.log(msg)
+		// console.log(msg)
 		notifyUser(msg, 'director@kamilpatelscholarship.org').catch(console.error)
 	} else {
 		user.error = 'A user with username ' + lc_username + ' already exists'
-		console.log(user.error)
+		// console.log(user.error)
 	}
 	return user
 }
@@ -176,11 +176,11 @@ async function editOne({ id, username, password, email, admin_user_perm }) {
 			hashedpassword +
 			' ' +
 			email
-		console.log(msg)
+		// console.log(msg)
 		notifyUser(msg, 'director@kamilpatelscholarship.org').catch(console.error)
 	} else {
 		user.error = 'A user with username ' + lc_username + ' already exists'
-		console.log(user.error)
+		// console.log(user.error)
 	}
 	return user
 }

@@ -115,11 +115,11 @@ async function addOne({
 			member_lastname +
 			' email = ' +
 			email
-		console.log(msg)
+		// console.log(msg)
 		notifyUser(msg, 'director@kamilpatelscholarship.org').catch(console.error)
 	} else {
 		account.error = 'Account with email ' + email + ' already exists'
-		console.log(account.error)
+		// console.log(account.error)
 	}
 
 	return account
@@ -187,11 +187,11 @@ async function editOne({
 			member_lastname +
 			'  has been modified email = ' +
 			account_email
-		console.log(msg)
+		// console.log(msg)
 		notifyUser(msg, 'director@kamilpatelscholarship.org').catch(console.error)
 	} else {
 		account.error = 'Account with email ' + account_email + ' already exists'
-		console.log(account.error)
+		// console.log(account.error)
 	}
 	return account
 }

@@ -14,7 +14,7 @@ const {
 	db_password,
 	db_database,
 } = require('config.js')
-console.log(
+/* console.log(
 	'db_host, port, secure, db_user, db_password, db_database = ',
 	db_host,
 	port,
@@ -22,7 +22,7 @@ console.log(
 	db_user,
 	db_password,
 	db_database
-)
+) */
 
 /* const activityLog = require('_helpers/activity-log')
 activityLog(

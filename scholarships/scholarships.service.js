@@ -234,13 +234,13 @@ async function deleteOne(scholarship_id) {
 		const msg =
 			'A scholarship nomination and account has been deleted for nominee id = ' +
 			account_id
-		console.log(msg)
+		// console.log(msg)
 		notifyUser(msg, 'director@kamilpatelscholarship.org').catch(console.error)
 		await conn.end()
 
 		return 1
 	} catch (e) {
-		console.log(e)
+		// console.log(e)
 		await conn.rollback()
 		await conn.end()
 	}
@@ -432,7 +432,7 @@ async function editOne({
 		'The scholarship nomination from team ' +
 		nominator_team +
 		' has been modified'
-	console.log(msg)
+	// console.log(msg)
 	return scholarship
 }
 
@@ -457,7 +457,7 @@ async function editOneEval({
 		scholarship_id +
 		' has been evaluated by ' +
 		eval_name
-	console.log(msg)
+	// console.log(msg)
 	notifyUser(msg, 'director@kamilpatelscholarship.org').catch(console.error)
 
 	return scholarship
@@ -507,13 +507,13 @@ async function changeStatus({ id, status }) {
 		const msg =
 			'A scholarship nomination and account status has been changed for scholarship id = ' +
 			id
-		console.log(msg)
+		// console.log(msg)
 		notifyUser(msg, 'director@kamilpatelscholarship.org').catch(console.error)
 		await conn.end()
 
 		return 1
 	} catch (e) {
-		console.log(e)
+		// console.log(e)
 		await conn.rollback()
 		await conn.end()
 	}
@@ -533,7 +533,7 @@ async function editNomineeText({ id, nominee_text }) {
 		'A scholarship nominee with id ' +
 		id +
 		' has completed their scholarship form'
-	console.log(msg)
+	// console.log(msg)
 	notifyUser(msg, 'director@kamilpatelscholarship.org').catch(console.error)
 
 	return scholarship

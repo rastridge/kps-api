@@ -9,7 +9,12 @@ function activityLog(filename, message, variable) {
 		message + ' ' + variable + '\n',
 		function (err) {
 			if (err) throw err
-			console.log('Saved!')
+			/* 			console.log(
+				'Logged at ' +
+					'/home/rastridge/api.kamilpatelscholarship.org/logs/' +
+					filename +
+					'.txt'
+			) */
 		}
 	)
 }

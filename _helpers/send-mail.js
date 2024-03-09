@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer')
 const { host, secure, user, pass } = require('config.js')
-console.log(host, secure, user, pass)
+// console.log(host, secure, user, pass)
 
 module.exports = notifyUser
 
