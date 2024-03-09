@@ -5,7 +5,7 @@ const multer = require('multer')
 const sharp = require('sharp')
 const path = require('path')
 const fs = require('fs')
-const { siteUrl, siteContentPath } = require('../config')
+const { siteUrl, siteContentPath } = require('config')
 
 let contentRootPath = ''
 let BASE_URL = ''
@@ -33,6 +33,12 @@ let storage = multer.diskStorage({
 let upload = multer({ storage: storage })
 
 router.post('/', upload.single('file'), async (req, res, next) => {
+	/* const activityLog = require('_helpers/activity-log')
+	activityLog(
+		'KPS_Testing',
+		'IN images_controller siteUrl, siteContentPath = ',
+		siteUrl + ' ' + siteContentPath
+	) */
 	const file = req.file
 	if (file) {
 		await sharp(file.path)

@@ -302,11 +302,11 @@ async function addOne({
 
 			// new nominator account created, save id for scholarship record
 			nominator_account_id = accountnew.insertId
-			activityLog(
+			/* 			activityLog(
 				'scholarships',
 				'IN addOne 3 nominator_account_id =  ',
 				nominator_account_id
-			)
+			) */
 		} else {
 			//  nominator account exists, save id for scholarship record
 			nominator_account_id = account.account_id

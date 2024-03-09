@@ -100,7 +100,7 @@ async function sendNewsletter({
 	newsletter_subject,
 	recipient_type_id,
 }) {
-	activityLog('email', 'newsletter_body_html= ', newsletter_body_html)
+	// activityLog('email', 'newsletter_body_html= ', newsletter_body_html)
 
 	const sql = `SELECT
                     account_id,
