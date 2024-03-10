@@ -13,12 +13,9 @@ function jwt() {
 			// public info
 			//
 			// access for nominators and nominees forms
-			'/', // filemanager
+			'/',
 			'//test', //
 			'//api/test', //
-			'//Upload', // filemanager
-			'//Download', // filemanager
-			/\/GetImage?.+/, // filemanager
 			'//users/authenticate', // login
 			'//users/reset', // login
 			'//accounts/nominees', // tor and ee input
